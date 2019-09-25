@@ -7,12 +7,38 @@ public class CalculadoraTest {
     /* Cálculo COMPLETO - Contribuinte PADRÃO com ATÉ DOIS DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuintePadraoComAteDoisDependentesImpostoFaixa1() {
+        /*
+        Base Calculo = 10.000,00 - 1.000,00 = 9.000,00
+        Desconto = 2% sobre 9.000,00 = 180,00
+        Base Líquida = 9.000,00 - 180,00 = 8.820,00
+        Imposto = ZERO, pois 8.820,00 <= 12.000,00
+        */
 
+        Currency totalRendimentos = Currency.valueOf(10000.00);
+        Currency contribuicao = Currency.valueOf(1000.00);
+        Contribuinte contribuinte = qualquerContribuinteSimplificado(totalRendimentos, contribuicao);
+
+        Currency imposto = calculadora.calcular(contribuinte, "completo");
+
+        assertEquals(Currency.ZERO, imposto);
     }
 
     @Test
     public void validaCalculoCompletoContribuintePadraoComAteDoisDependentesImpostoFaixa2() {
+        /*
+        Base Calculo = 20.000,00 - 2.000,00 = 18.000,00
+        Desconto = 2% sobre 18.000,00 = 360,00
+        Base Líquida = 18.000,00 - 360,00 = 17.640,00
+        Imposto = (17.640,00 - 12.000,00) * 0,15 = 846,00
+        */
 
+        Currency totalRendimentos = Currency.valueOf(20000.00);
+        Currency contribuicao = Currency.valueOf(2000.00);
+        Contribuinte contribuinte = qualquerContribuinteSimplificado(totalRendimentos, contribuicao);
+
+        Currency imposto = calculadora.calcular(contribuinte, "completo");
+
+        assertEquals(Currency.valueOf(846.00), imposto);
     }
 
     @Test
