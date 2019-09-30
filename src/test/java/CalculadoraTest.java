@@ -1,6 +1,7 @@
-import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.Test;
 
 public class CalculadoraTest {
 
@@ -43,8 +44,23 @@ public class CalculadoraTest {
 
     @Test
     public void validaCalculoCompletoContribuintePadraoComAteDoisDependentesImpostoFaixa3() {
+    	 /*
+        Base Calculo = 30.000,00 - 3.000,00 = 27.000,00
+        Desconto = 2% sobre 27.000,00 = 540,00
+        Base Líquida = 27.000 - 540,00 = 26.460,00
+        Imposto = (26.460 - 24.000,00) * 0,275 =  676,50 + 1.800 = 2.476,50
+        */
+    	
+    	Currency totalRendimentos = Currency.valueOf(30000.00);
+    	Currency contribuicao = Currency.valueOf(3000.00);
+    	Contribuinte contribuinte = qualquerContribuinteSimplificado(totalRendimentos, contribuicao);
 
+    	Currency imposto = calculadora.calcular(contribuinte, "completo");
+    	
+    	assertEquals(Currency.valueOf(2476.50), imposto);
+    	
     }
+
 
     /* Cálculo COMPLETO - Contribuinte PADRÃO com TRÊS A CINCO DEPENDENTES */
     @Test
