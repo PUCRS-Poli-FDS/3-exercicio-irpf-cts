@@ -66,6 +66,22 @@ public class CalculadoraTest {
     @Test
     public void validaCalculoCompletoContribuintePadraoComTresACincoDependentesImpostoFaixa1() {
 
+    	/*
+        Base Calculo = 10.000,00 - 1.000,00 = 9.000,00
+        Desconto = 3,5% sobre 9.000,00 = 315,00
+        Base Líquida = 9.000,00 - 315,00 = 8.685,00
+        Imposto = ZERO, pois 8.685,00 <= 12.000,00
+        */
+    	
+    	Currency totalRendimentos = Currency.valueOf(10000.00);
+        Currency contribuicao = Currency.valueOf(1000.00);
+        Contribuinte contribuinte = qualquerContribuinteCompleto(40, 4, totalRendimentos, contribuicao);
+        
+        Currency imposto = calculadora.calcular(contribuinte, "completo");
+
+        assertEquals(Currency.ZERO, imposto);
+        
+        
     }
 
     @Test
