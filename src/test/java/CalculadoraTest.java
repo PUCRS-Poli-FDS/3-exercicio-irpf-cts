@@ -160,21 +160,47 @@ public class CalculadoraTest {
     	
     	Currency imposto = calculadora.calcular(contribuinte, "completo");
     	
-    	assertEquals(Currency.valueOf(765.00), imposto);
-    	
-    	
+    	assertEquals(Currency.valueOf(765.00), imposto);    	
     	
     }
 
     @Test
     public void validaCalculoCompletoContribuintePadraoComMaisDeCincoDependentesImpostoFaixa3() {
+    	/*
+        Base Calculo = 30.000,00 - 3.000,00 = 27.000,00
+        Desconto = 5% sobre 27.000,00 = 1.350,00
+        Base Líquida = 27.000,00 - 1.350,00 = 25.650,00
+        Imposto = (25.650,00 - 24.000) * 0,275 = 453,75 + 1.800,00 =  2.253,75
+        */
 
+    	Currency totalRendimentos = Currency.valueOf(30000.00);
+    	Currency contribuicao = Currency.valueOf(3000.00);
+    	
+    	Contribuinte contribuinte = qualquerContribuinteCompleto(55, 7, totalRendimentos, contribuicao);
+    	
+    	Currency imposto = calculadora.calcular(contribuinte, "completo");
+    	
+    	assertEquals(Currency.valueOf(2253.75), imposto);
     }
 
     /* Cálculo COMPLETO - Contribuinte IDOSO com ATÉ DOIS DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuinteIdosoComAteDoisDependentesImpostoFaixa1() {
+    	/*
+        Base Calculo = 10.000,00 - 1.000,00 = 9.000,00
+        Desconto = 3% sobre 9.000,00 = 270,00
+        Base Líquida = 9.000,00 - 270,00 = 8.730,00
+        Imposto = ZERO, pois 8.730,00 <= 12.000,00
+        */
+    	
+    	Currency totalRendimentos = Currency.valueOf(10000.00);
+    	Currency contribuicao = Currency.valueOf(1000.00);
+    	
+    	Contribuinte contribuinte = qualquerContribuinteCompleto(70, 1, totalRendimentos, contribuicao);
 
+    	Currency imposto = calculadora.calcular(contribuinte, "completo");
+    	
+    	assertEquals(Currency.ZERO, imposto);
     }
 
     @Test
