@@ -205,12 +205,41 @@ public class CalculadoraTest {
 
     @Test
     public void validaCalculoCompletoContribuinteIdosoComAteDoisDependentesImpostoFaixa2() {
-
+    	/*
+        Base Calculo = 20.000,00 - 2.000,00 = 18.000,00
+        Desconto = 3% sobre 18.000,00 = 540,00
+        Base Líquida = 18.000,00 - 540,00 = 17.460,00
+        Imposto = (17.460,00 - 12.000) * 0,15 = 819,00 
+        */
+    	
+    	Currency totalRendimentos = Currency.valueOf(20000.00);
+    	Currency contribuicao = Currency.valueOf(2000.00);
+    	
+    	Contribuinte contribuinte = qualquerContribuinteCompleto(75, 2, totalRendimentos, contribuicao);
+    	
+    	Currency imposto = calculadora.calcular(contribuinte, "completo");
+    	
+    	assertEquals(Currency.valueOf(819.00), imposto);
     }
 
     @Test
     public void validaCalculoCompletoContribuinteIdosoComAteDoisDependentesImpostoFaixa3() {
-
+    	/*
+        Base Calculo = 30.000,00 - 3.000,00 = 27.000,00
+        Desconto = 3% sobre 27.000,00 = 810,00
+        Base Líquida = 27.000,00 - 810,00 = 26.190,00
+        Imposto = (26.190,00 - 24.000) * 0,275 = 602,25 + 1.800,00 =  2.402,25
+        */
+    	
+    	Currency totalRendimentos = Currency.valueOf(30000.00);
+    	Currency contribuicao = Currency.valueOf(3000.00);
+    	
+    	Contribuinte contribuinte = qualquerContribuinteCompleto(80, 2, totalRendimentos, contribuicao);
+    	
+    	Currency imposto = calculadora.calcular(contribuinte, "completo");
+    	
+    	assertEquals(Currency.valueOf(2402.25), imposto);
+    	
     }
 
     /* Cálculo COMPLETO - Contribuinte IDOSO com TRÊS A CINCO DEPENDENTES */
