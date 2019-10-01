@@ -86,13 +86,40 @@ public class CalculadoraTest {
 
     @Test
     public void validaCalculoCompletoContribuintePadraoComTresACincoDependentesImpostoFaixa2() {
-
+    	/*
+        Base Calculo = 20.000,00 - 2.000,00 = 18.000,00
+        Desconto = 3,5% sobre 18.000,00 = 630,00
+        Base Líquida = 18.000,00 - 630,00 = 17.370,00
+        Imposto = (17.370,00 - 12.000) * 0,15 = 805,50
+        */
+    	
+    	Currency totalRendimentos = Currency.valueOf(20000.00);
+    	Currency contribuicao = Currency.valueOf(2000.00);
+    	
+    	Contribuinte contribuinte = qualquerContribuinteCompleto(40, 5, totalRendimentos, contribuicao);
+    	
+    	Currency imposto = calculadora.calcular(contribuinte, "completo");    	
+    	
+    	assertEquals(Currency.valueOf(805.50), imposto);
     }
 
     @Test
     public void validaCalculoCompletoContribuintePadraoComTresACincoDependentesImpostoFaixa3() {
-
-    }
+    	/*
+        Base Calculo = 30.000,00 - 3.000,00 = 27.000,00
+        Desconto = 3,5% sobre 27.000,00 = 945,00
+        Base Líquida = 27.000,00 - 945,00 = 26.055,00
+        Imposto = (26.055,00 - 24.000) * 0,275 = 565,12 + 1.800,00 = 2.365,13
+                */
+    	Currency totalRendimentos = Currency.valueOf(30000.00);
+    	Currency contribuicao = Currency.valueOf(3000.00);
+    	
+    	Contribuinte contribuinte = qualquerContribuinteCompleto(45, 3, totalRendimentos, contribuicao);
+    	
+    	Currency imposto = calculadora.calcular(contribuinte, "completo");
+    	
+    	assertEquals(Currency.valueOf(2365.12), imposto);
+    	}
 
     /* Cálculo COMPLETO - Contribuinte PADRÃO com MAIS DE CINCO DEPENDENTES */
     @Test
