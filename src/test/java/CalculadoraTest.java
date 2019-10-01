@@ -246,16 +246,62 @@ public class CalculadoraTest {
     @Test
     public void validaCalculoCompletoContribuinteIdosoComTresACincoDependentesImpostoFaixa1() {
 
+    	/*
+        Base Calculo = 10.000,00 - 1.000,00 = 9.000,00
+        Desconto = 4,5% sobre 9.000,00 = 405,00
+        Base Líquida = 9.000,00 - 405,00 = 8.595,00
+        Imposto = ZERO, pois 8.595,00 <= 12.000,00
+        */
+    	
+    	Currency totalRendimentos = Currency.valueOf(10000.00);
+    	Currency contribuicao = Currency.valueOf(1000.00);
+    	
+    	Contribuinte contribuinte = qualquerContribuinteCompleto(92, 4, totalRendimentos, contribuicao);
+    	
+    	Currency imposto = calculadora.calcular(contribuinte, "completo");
+    	
+    	assertEquals((Currency.ZERO), imposto);
     }
 
     @Test
     public void validaCalculoCompletoContribuinteIdosoComTresACincoDependentesImpostoFaixa2() {
-
+    	/*
+        Base Calculo = 20.000,00 - 2.000,00 = 18.000,00
+        Desconto = 4,5% sobre 18.000,00 = 810,00
+        Base Líquida = 18.000,00 - 810,00 = 17.190,00
+        Imposto = (17.190,00 - 12.000,00) * 0,15 = 778,50
+        */
+    	
+    	Currency totalRendimentos = Currency.valueOf(20000.00);
+    	Currency contribuicao = Currency.valueOf(2000.00);
+    	
+    	Contribuinte contribuinte = qualquerContribuinteCompleto(73, 5, totalRendimentos, contribuicao);
+    	
+    	Currency imposto = calculadora.calcular(contribuinte, "completo");
+    	
+    	assertEquals(Currency.valueOf(778.50), imposto);
     }
 
     @Test
     public void validaCalculoCompletoContribuinteIdosoComTresACincoDependentesImpostoFaixa3() {
 
+    	/*
+        Base Calculo = 30.000,00 - 3.000,00 = 27.000,00
+        Desconto = 4,5% sobre 27.000,00 = 1.215,00
+        Base Líquida = 27.000,00 - 1.215,00 = 25.785,00
+        Imposto = (25.785,00 - 24.000) * 0,275 = 490,87  + 1.800,00 =  2.290,88
+        */
+    	
+    	Currency totalRendimentos = Currency.valueOf(30000.00);
+    	Currency contribuicao = Currency.valueOf(3000.00);
+    	
+    	Contribuinte contribuinte = qualquerContribuinteCompleto(77, 3, totalRendimentos, contribuicao);
+    	
+    	Currency imposto = calculadora.calcular(contribuinte, "completo");
+    	
+    	assertEquals(Currency.valueOf(2290.88), imposto);
+        	
+    
     }
 
     /* Cálculo COMPLETO - Contribuinte IDOSO com MAIS DE CINCO DEPENDENTES */
