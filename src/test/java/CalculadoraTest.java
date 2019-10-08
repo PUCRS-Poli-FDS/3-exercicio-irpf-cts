@@ -1,11 +1,14 @@
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import br.pucrs.politecnica._4636h.irpf.controller.Calculadora;
+import br.pucrs.politecnica._4636h.irpf.model.Contribuinte;
+import br.pucrs.politecnica._4636h.irpf.model.Currency;
+import org.junit.jupiter.api.Test;
 
 public class CalculadoraTest {
 
-    /* Cálculo COMPLETO - Contribuinte PADRÃO com ATÉ DOIS DEPENDENTES */
+    /* Cálculo COMPLETO - br.pucrs.politecnica._4636h.irpf.model.Contribuinte PADRÃO com ATÉ DOIS DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuintePadraoComAteDoisDependentesImpostoFaixa1() {
         /*
@@ -62,7 +65,7 @@ public class CalculadoraTest {
     }
 
 
-    /* Cálculo COMPLETO - Contribuinte PADRÃO com TRÊS A CINCO DEPENDENTES */
+    /* Cálculo COMPLETO - br.pucrs.politecnica._4636h.irpf.model.Contribuinte PADRÃO com TRÊS A CINCO DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuintePadraoComTresACincoDependentesImpostoFaixa1() {
 
@@ -121,7 +124,7 @@ public class CalculadoraTest {
     	assertEquals(Currency.valueOf(2365.12), imposto);
     	}
 
-    /* Cálculo COMPLETO - Contribuinte PADRÃO com MAIS DE CINCO DEPENDENTES */
+    /* Cálculo COMPLETO - br.pucrs.politecnica._4636h.irpf.model.Contribuinte PADRÃO com MAIS DE CINCO DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuintePadraoComMaisDeCincoDependentesImpostoFaixa1() {
 
@@ -183,7 +186,7 @@ public class CalculadoraTest {
     	assertEquals(Currency.valueOf(2253.75), imposto);
     }
 
-    /* Cálculo COMPLETO - Contribuinte IDOSO com ATÉ DOIS DEPENDENTES */
+    /* Cálculo COMPLETO - br.pucrs.politecnica._4636h.irpf.model.Contribuinte IDOSO com ATÉ DOIS DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuinteIdosoComAteDoisDependentesImpostoFaixa1() {
     	/*
@@ -242,7 +245,7 @@ public class CalculadoraTest {
     	
     }
 
-    /* Cálculo COMPLETO - Contribuinte IDOSO com TRÊS A CINCO DEPENDENTES */
+    /* Cálculo COMPLETO - br.pucrs.politecnica._4636h.irpf.model.Contribuinte IDOSO com TRÊS A CINCO DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuinteIdosoComTresACincoDependentesImpostoFaixa1() {
 
@@ -304,44 +307,20 @@ public class CalculadoraTest {
     
     }
 
-    /* Cálculo COMPLETO - Contribuinte IDOSO com MAIS DE CINCO DEPENDENTES */
+    /* Cálculo COMPLETO - br.pucrs.politecnica._4636h.irpf.model.Contribuinte IDOSO com MAIS DE CINCO DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuinteIdosoComMaisDeCincoDependentesImpostoFaixa1() {
-    //Gustavo Rocks
-    	Currency totalRendimentos = Currency.valueOf(10000.00);
-    	Currency contribuicao = Currency.valueOf(1000.00);
-    	
-    	Contribuinte contribuinte = qualquerContribuinteCompleto(80, 6, totalRendimentos, contribuicao);
-    	
-    	Currency imposto = calculadora.calcular(contribuinte, "completo");
-    	
-    	assertEquals(Currency.valueOf(0.0), imposto);
+
     }
 
     @Test
     public void validaCalculoCompletoContribuinteIdosoComMaisDeCincoDependentesImpostoFaixa2() {
-    //Gustavo Rocks
-    	Currency totalRendimentos = Currency.valueOf(20000.00);
-    	Currency contribuicao = Currency.valueOf(2000.00);
-    	
-    	Contribuinte contribuinte = qualquerContribuinteCompleto(87, 6, totalRendimentos, contribuicao);
-    	
-    	Currency imposto = calculadora.calcular(contribuinte, "completo");
-    	
-    	assertEquals(Currency.valueOf(738.00), imposto);
+
     }
 
     @Test
     public void validaCalculoCompletoContribuinteIdosoComMaisDeCincoDependentesImpostoFaixa3() {
-    	//Gustavo Rocks
-    	Currency totalRendimentos = Currency.valueOf(30000.00);
-    	Currency contribuicao = Currency.valueOf(3000.00);
-    	
-    	Contribuinte contribuinte = qualquerContribuinteCompleto(79, 8, totalRendimentos, contribuicao);
-    	
-    	Currency imposto = calculadora.calcular(contribuinte, "completo");
-    	
-    	assertEquals(Currency.valueOf(2179.50), imposto);
+
     }
 
     /* Cálculo SIMPLIFICADO */
