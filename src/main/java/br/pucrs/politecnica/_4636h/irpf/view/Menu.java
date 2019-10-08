@@ -71,7 +71,6 @@ public class Menu {
     }
 
     private static boolean isValidCPF(String cpf) {
-   
     	return cpf.length() == 11; 
     }
     
