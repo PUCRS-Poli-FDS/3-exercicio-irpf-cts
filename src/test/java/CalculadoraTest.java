@@ -1,11 +1,14 @@
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import br.pucrs.politecnica._4636h.irpf.controller.Calculadora;
+import br.pucrs.politecnica._4636h.irpf.model.Contribuinte;
+import br.pucrs.politecnica._4636h.irpf.model.Currency;
+import org.junit.jupiter.api.Test;
 
 public class CalculadoraTest {
 
-    /* Cálculo COMPLETO - Contribuinte PADRÃO com ATÉ DOIS DEPENDENTES */
+    /* Cálculo COMPLETO - br.pucrs.politecnica._4636h.irpf.model.Contribuinte PADRÃO com ATÉ DOIS DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuintePadraoComAteDoisDependentesImpostoFaixa1() {
         /*
@@ -62,7 +65,7 @@ public class CalculadoraTest {
     }
 
 
-    /* Cálculo COMPLETO - Contribuinte PADRÃO com TRÊS A CINCO DEPENDENTES */
+    /* Cálculo COMPLETO - br.pucrs.politecnica._4636h.irpf.model.Contribuinte PADRÃO com TRÊS A CINCO DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuintePadraoComTresACincoDependentesImpostoFaixa1() {
 
@@ -121,7 +124,7 @@ public class CalculadoraTest {
     	assertEquals(Currency.valueOf(2365.12), imposto);
     	}
 
-    /* Cálculo COMPLETO - Contribuinte PADRÃO com MAIS DE CINCO DEPENDENTES */
+    /* Cálculo COMPLETO - br.pucrs.politecnica._4636h.irpf.model.Contribuinte PADRÃO com MAIS DE CINCO DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuintePadraoComMaisDeCincoDependentesImpostoFaixa1() {
 
@@ -183,7 +186,7 @@ public class CalculadoraTest {
     	assertEquals(Currency.valueOf(2253.75), imposto);
     }
 
-    /* Cálculo COMPLETO - Contribuinte IDOSO com ATÉ DOIS DEPENDENTES */
+    /* Cálculo COMPLETO - br.pucrs.politecnica._4636h.irpf.model.Contribuinte IDOSO com ATÉ DOIS DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuinteIdosoComAteDoisDependentesImpostoFaixa1() {
     	/*
@@ -242,7 +245,7 @@ public class CalculadoraTest {
     	
     }
 
-    /* Cálculo COMPLETO - Contribuinte IDOSO com TRÊS A CINCO DEPENDENTES */
+    /* Cálculo COMPLETO - br.pucrs.politecnica._4636h.irpf.model.Contribuinte IDOSO com TRÊS A CINCO DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuinteIdosoComTresACincoDependentesImpostoFaixa1() {
 
@@ -304,7 +307,7 @@ public class CalculadoraTest {
     
     }
 
-    /* Cálculo COMPLETO - Contribuinte IDOSO com MAIS DE CINCO DEPENDENTES */
+    /* Cálculo COMPLETO - br.pucrs.politecnica._4636h.irpf.model.Contribuinte IDOSO com MAIS DE CINCO DEPENDENTES */
     @Test
     public void validaCalculoCompletoContribuinteIdosoComMaisDeCincoDependentesImpostoFaixa1() {
 
