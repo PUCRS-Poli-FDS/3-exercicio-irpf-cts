@@ -2,6 +2,9 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import br.pucrs.politecnica._4636h.irpf.controller.Calculadora;
+import br.pucrs.politecnica._4636h.irpf.controller.CalcularImposto;
+import br.pucrs.politecnica._4636h.irpf.controller.CalculoBase;
+import br.pucrs.politecnica._4636h.irpf.controller.CalculoDesconto;
 import br.pucrs.politecnica._4636h.irpf.model.Contribuinte;
 import br.pucrs.politecnica._4636h.irpf.model.Currency;
 import org.junit.jupiter.api.Test;
@@ -390,6 +393,9 @@ public class CalculadoraTest {
         return new Contribuinte("Maria Silva", "00011122233", idade, totalRendimentos, contribuicao, dependentes);
     }
 
-    private Calculadora calculadora = new Calculadora();
+    private CalculoBase calculoBase = new CalculoBase();
+    private CalculoDesconto calculoDesconto = new CalculoDesconto();
+    private CalcularImposto calculoImposto = new CalcularImposto();
+    private Calculadora calculadora = new Calculadora(calculoBase, calculoDesconto,calculoImposto);
 
 }
