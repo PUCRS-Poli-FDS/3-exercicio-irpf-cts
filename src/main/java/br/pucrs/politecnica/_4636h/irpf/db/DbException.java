@@ -1,4 +1,4 @@
-package br.pucrs.politecnica._4636h.irpf.DB;
+package br.pucrs.politecnica._4636h.irpf.db;
 
 public class DbException extends RuntimeException {
 
