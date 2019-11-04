@@ -14,6 +14,4 @@ public interface ContribuinteDAO {
 
 	Contribuinte findByCPF(String cpf);
 
-	void delete(Integer id);
-
 }
