@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b4a8f61-1d50-421c-883e-dc6392459ca3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/CalcularImposto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/CalculoBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/CalculoDesconto.java" afterDir="false" />
+    <list default="true" id="2b4a8f61-1d50-421c-883e-dc6392459ca3" name="Default Changelist" comment="Aula 2019-11-05">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoBaseCalculo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoBaseCalculoPadrao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDesconto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompleto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompletoIdoso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompletoIdosoComAteDoisDependentes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompletoIdosoComMaisDeCincoDependentes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompletoNaoIdoso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoSimplificado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImposto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoFaixa1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoFaixa2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoFaixa3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoPorFaixa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpfBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpfCompleto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpfSimplificado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/Calculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/Calculadora.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CalculadoraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CalculadoraTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,22 +30,34 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="3-exercicio-irpf-cts" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/CalculadoraTest.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpfSimplificado.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="393" column="5" lean-forward="true" selection-start-line="393" selection-start-column="5" selection-end-line="393" selection-end-column="5" />
+            <state relative-caret-position="90">
+              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding>
+                <element signature="e#282#283#0" expanded="true" />
+                <element signature="e#338#339#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/Calculadora.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpfBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="390">
+              <caret line="26" column="80" lean-forward="true" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1433#1434#0" expanded="true" />
+                <element signature="e#1484#1485#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,11 +67,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Paulo Vianna Mu &lt;paulomu@live.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -58,6 +90,26 @@
         <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/CalcularImposto.java" />
         <option value="$PROJECT_DIR$/src/test/java/CalculadoraTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/Calculadora.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpf.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImposto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDesconto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoFaixa1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoFaixa2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoFaixa3.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompletoNaoIdoso.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoSimplificado.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompleto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoFaixa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoPorFaixa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoBaseCalculo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoBaseCalculoPadrao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpfCompleto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpfBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompletoIdosoComAteDoisDependentes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompletoIdoso.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompletoIdosoComMaisDeCincoDependentes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpfSimplificado.java" />
       </list>
     </option>
   </component>
@@ -73,43 +125,57 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="irpf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho2FDS" type="462c0819:PsiDirectoryNode" />
+              <item name="3-exercicio-irpf-cts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3-exercicio-irpf-cts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="irpf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho2FDS" type="462c0819:PsiDirectoryNode" />
+              <item name="3-exercicio-irpf-cts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3-exercicio-irpf-cts" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="3-exercicio-irpf-cts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3-exercicio-irpf-cts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="irpf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho2FDS" type="462c0819:PsiDirectoryNode" />
+              <item name="3-exercicio-irpf-cts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3-exercicio-irpf-cts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="irpf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho2FDS" type="462c0819:PsiDirectoryNode" />
+              <item name="3-exercicio-irpf-cts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3-exercicio-irpf-cts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="irpf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho2FDS" type="462c0819:PsiDirectoryNode" />
+              <item name="3-exercicio-irpf-cts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3-exercicio-irpf-cts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="irpf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="irpf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho2FDS" type="462c0819:PsiDirectoryNode" />
+              <item name="3-exercicio-irpf-cts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3-exercicio-irpf-cts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="irpf" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="3-exercicio-irpf-cts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3-exercicio-irpf-cts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -117,49 +183,37 @@
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="irpf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho2FDS" type="462c0819:PsiDirectoryNode" />
+              <item name="3-exercicio-irpf-cts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3-exercicio-irpf-cts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="irpf" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="irpf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho2FDS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="irpf" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="irpf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho2FDS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="irpf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho2FDS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572565729026" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572998221886" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.pucrs.politecnica._4636h.irpf.application" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -225,25 +279,19 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1822000" />
+    <option name="totallyTimeSpent" value="4768000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-1" y="0" width="1602" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24713467" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49866667" visible="true" weight="0.3491656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.32974428" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50133336" side_tool="true" weight="0.30359435" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32974428" />
@@ -251,28 +299,31 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006418" side_tool="true" weight="0.32933334" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49935815" weight="0.67466664" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32933334" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Aula 2019-11-05" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aula 2019-11-05" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/view/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -290,27 +341,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/CalcularImposto.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/CalculadoraTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="212">
+          <caret line="393" column="5" lean-forward="true" selection-start-line="393" selection-start-column="5" selection-end-line="393" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImposto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/CalculoDesconto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="150">
           <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/CalculoBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -319,17 +367,289 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/Calculadora.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CalculadoraTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoFaixa2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="393" column="5" lean-forward="true" selection-start-line="393" selection-start-column="5" selection-end-line="393" selection-end-column="5" />
+        <state relative-caret-position="120">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoFaixa3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/CalcularImposto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/controller/CalculoBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompletoNaoIdoso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoSimplificado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoPorFaixa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#1164#1165#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoImpostoFaixa1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpfCompleto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDesconto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoBaseCalculo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompleto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompletoIdoso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoBaseCalculoPadrao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompletoIdosoComAteDoisDependentes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoDescontoCompletoIdosoComMaisDeCincoDependentes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpfSimplificado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/pucrs/politecnica/_4636h/irpf/application/CalculoIrpfBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="80" lean-forward="true" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1433#1434#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>irpf</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: net.bytebuddy:byte-buddy-agent:1.9.10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
