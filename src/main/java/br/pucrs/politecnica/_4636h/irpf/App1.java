@@ -14,10 +14,10 @@ public class App1 {
 	public static void main (String [] args) {
 		
 		ContribuinteDAO contribuinteDAO = new ContribuinteDaoJDBC(DB.getConnection());
-		/*
+		
 		System.out.println("=== Teste 1: findByCPF ===");		
 		System.out.println(contribuinteDAO.findByCPF("75098814050"));
-		
+		/*
 		System.out.println("=== Teste 2: insert ===");
 		Contribuinte contribuinte1 = new Contribuinte();
 		contribuinte1.setNome("Marco Polo");
