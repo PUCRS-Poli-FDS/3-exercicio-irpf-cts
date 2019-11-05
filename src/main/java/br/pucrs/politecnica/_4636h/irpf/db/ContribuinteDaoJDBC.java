@@ -19,7 +19,22 @@ public class ContribuinteDaoJDBC implements ContribuinteDAO {
 
 	@Override
 	public void insert(Contribuinte obj) {
-		// TODO Auto-generated method stub
+		try {
+			String insert = "INSERT INTO contribuintes "
+							+ "(nome, cpf, idade, num_dependentes) "
+							+ "VALUES "
+							+ "(?, ?, ?, ?) ";
+			
+			conn = DB.getConnection();
+			PreparedStatement st = conn.prepareStatement(insert);
+			st.setString(1, obj.getNome());
+			st.setString(2, obj.getCpf());
+			st.setInt(3, obj.getIdade());
+			st.setInt(4, obj.getNumDependentes());
+			st.executeUpdate();
+		}catch (SQLException e) {
+			throw new DbException (e.getMessage());
+		}
 
 	}
 
