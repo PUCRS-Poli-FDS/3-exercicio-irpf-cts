@@ -4,14 +4,14 @@ import java.util.List;
 
 public interface ContribuinteDAO {
 
-	void insert(Contribuinte contribuinte);
+	void insert(Contribuinte obj);
 
-	void update(Contribuinte contribuinte);
+	void update(Contribuinte obj);
 
-	List<Contribuinte> list();
-
-	void delete(String cpf);
+	void deleteByCpf(String cpf);
 
 	Contribuinte findByCPF(String cpf);
+	
+	List<Contribuinte> findaAll();
 
 }
