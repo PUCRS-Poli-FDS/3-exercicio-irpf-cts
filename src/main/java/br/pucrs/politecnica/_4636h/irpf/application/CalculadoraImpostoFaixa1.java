@@ -2,7 +2,7 @@ package br.pucrs.politecnica._4636h.irpf.application;
 
 import br.pucrs.politecnica._4636h.irpf.model.Currency;
 
-public class CalculoImpostoFaixa1 implements CalculoImposto {
+public class CalculadoraImpostoFaixa1 implements CalculadoraImposto {
 
     @Override
     public Currency calcular(Currency baseCalculo) {

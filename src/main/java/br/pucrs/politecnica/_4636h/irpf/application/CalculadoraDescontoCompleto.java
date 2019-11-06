@@ -3,21 +3,21 @@ package br.pucrs.politecnica._4636h.irpf.application;
 import br.pucrs.politecnica._4636h.irpf.model.Contribuinte;
 import br.pucrs.politecnica._4636h.irpf.model.Currency;
 
-public class CalculoDescontoCompleto implements CalculoDesconto {
+public class CalculadoraDescontoCompleto implements CalculadoraDesconto {
 
     private static final Integer IDADE_IDOSO = 65;
 
     @Override
     public Currency calcular(Contribuinte contribuinte, Currency baseCalculo) {
-        CalculoDesconto calculoDesconto;
+        CalculadoraDesconto calculadoraDesconto;
 
         if (isIdoso(contribuinte)) {
-            calculoDesconto = new CalculoDescontoCompletoIdoso();
+            calculadoraDesconto = new CalculadoraDescontoCompletoIdoso();
         } else {
-            calculoDesconto = new CalculoDescontoCompletoNaoIdoso();
+            calculadoraDesconto = new CalculadoraDescontoCompletoNaoIdoso();
         }
 
-        return calculoDesconto.calcular(contribuinte, baseCalculo);
+        return calculadoraDesconto.calcular(contribuinte, baseCalculo);
     }
 
     private static boolean isIdoso(Contribuinte contribuinte) {

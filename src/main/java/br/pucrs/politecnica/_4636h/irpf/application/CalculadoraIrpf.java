@@ -3,8 +3,8 @@ package br.pucrs.politecnica._4636h.irpf.application;
 import br.pucrs.politecnica._4636h.irpf.model.Contribuinte;
 import br.pucrs.politecnica._4636h.irpf.model.Currency;
 
-public interface CalculoDesconto {
+public interface CalculadoraIrpf {
 
-    Currency calcular(Contribuinte contribuinte, Currency baseCalculo);
+    Currency calcular(Contribuinte contribuinte);
 
 }
