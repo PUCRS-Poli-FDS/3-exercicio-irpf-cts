@@ -1,6 +1,5 @@
 package br.pucrs.politecnica._4636h.irpf.db;
 
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,7 +22,9 @@ public class ContribuinteDaoJDBC implements ContribuinteDAO {
 	@Override
 	public void insert(Contribuinte obj) {
 		try {
-			String insert = "INSERT INTO contribuintes " + "(nome, cpf, idade, total_rendimentos, contribuicao_prev, num_dependentes) " + "VALUES "
+			String insert = "INSERT INTO contribuintes " 
+					+ "(nome, cpf, idade, total_rendimentos, contribuicao_prev, num_dependentes) " 
+					+ "VALUES "
 					+ "(?, ?, ?, ?) ";
 
 			conn = DB.getConnection();
@@ -43,7 +44,8 @@ public class ContribuinteDaoJDBC implements ContribuinteDAO {
 
 	@Override
 	public void update(Contribuinte obj) {
-		String sql = "UPDATE contribuintes SET " + "nome = ?, cpf = ?, idade = ?, total_rendimentos = ?, contribuicao_prev = ?, num_dependentes = ? "
+		String sql = "UPDATE contribuintes SET " 
+				+ "nome = ?, cpf = ?, idade = ?, total_rendimentos = ?, contribuicao_prev = ?, num_dependentes = ? "
 				+ "WHERE cpf = ? ";
 		try {
 			conn = DB.getConnection();
