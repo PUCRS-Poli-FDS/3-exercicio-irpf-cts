@@ -31,7 +31,7 @@ public class InterfaceUsuario extends Application {
 		
 		this.primaryStage = primaryStage;
 		GridPane root = new GridPane();
-		Scene scene = new Scene(root, 500, 400);
+		Scene scene = new Scene(root, 600, 400);
 		primaryStage.setTitle("IRPF");
 		primaryStage.setScene(scene);
 		primaryStage.show();
@@ -73,17 +73,24 @@ public class InterfaceUsuario extends Application {
 
 		HBox hbBut = new HBox();
 		hbBut.setAlignment(Pos.BOTTOM_CENTER);
-		Button butCalcular = new Button("Calcular");
-		butCalcular.setOnAction(e -> trataCalcular());
+		Button butCalcularSimples = new Button("Calcular Simples");
+		butCalcularSimples.setOnAction(e -> trataCalcularSimples());
+		Button butCalcularCompleto = new Button ("Calcular Completo");
+		butCalcularCompleto.setOnContextMenuRequested(e -> trataCalcularCompleto());
 		Button butCancelar = new Button("Cancelar");
 		butCancelar.setOnAction(e -> trataCancelar());
-		hbBut.getChildren().add(butCalcular);
+		hbBut.getChildren().add(butCalcularCompleto);
+		hbBut.getChildren().add(butCalcularSimples);
 		hbBut.getChildren().add(butCancelar);
 		root.add(hbBut, 1, 11);
 
 	}
 
-	private void trataCalcular() {
+	private void trataCalcularCompleto() {
+		System.out.println("Contribuinte: " + tfContribuinte.getText() + "\nTotal Imposto de Renda: R$9999.99");
+	}
+
+	private void trataCalcularSimples() {
 		System.out.println("Contribuinte: " + tfContribuinte.getText() + "\nTotal Imposto de Renda: R$9999.99");
 	}
 
