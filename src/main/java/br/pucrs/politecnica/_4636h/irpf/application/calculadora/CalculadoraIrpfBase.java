@@ -1,17 +1,17 @@
-package br.pucrs.politecnica._4636h.irpf.application;
+package br.pucrs.politecnica._4636h.irpf.application.calculadora;
 
+import br.pucrs.politecnica._4636h.irpf.application.calculadora.desconto.CalculadoraDesconto;
 import br.pucrs.politecnica._4636h.irpf.model.Contribuinte;
 import br.pucrs.politecnica._4636h.irpf.model.Currency;
-import br.pucrs.politecnica._4636h.irpf.model.FaixaImposto;
 
 public abstract class CalculadoraIrpfBase implements CalculadoraIrpf {
 
     private final CalculadoraBaseCalculo calculadoraBaseCalculo;
     private final CalculadoraDesconto calculadoraDesconto;
-    private final CalculadoraImpostoFactory calculadoraImpostoFactory;
+    private final CalculadoraImposto calculadoraImposto;
 
     public CalculadoraIrpfBase(CalculadoraDesconto calculadoraDesconto) {
-        this(calculoBaseCalculoPadrao(), calculadoraDesconto, calculoImpostoPorFaixa());
+        this(calculadoraBaseCalculo(), calculadoraDesconto, calculadoraImposto());
     }
 
     public CalculadoraIrpfBase(CalculadoraBaseCalculo calculadoraBaseCalculo,
@@ -27,16 +27,14 @@ public abstract class CalculadoraIrpfBase implements CalculadoraIrpf {
         Currency baseCalculo = calculadoraBaseCalculo.calcular(contribuinte);
         Currency desconto = calculadoraDesconto.calcular(contribuinte, baseCalculo);
         Currency baseCalculoLiquida = baseCalculo.subtract(desconto);
-        return FaixaImposto.getFaixa(baseCalculoLiquida).getCalculadora().calcular()
-
-        return calculadoraImpostoFactory.getCalculadora(baseCalculoLiquida).calcular()
+        return calculadoraImposto.calcular(baseCalculoLiquida);
     }
 
-    private static CalculadoraBaseCalculo calculoBaseCalculoPadrao() {
-        return new CalculadoraBaseCalculoPadrao();
+    private static CalculadoraBaseCalculo calculadoraBaseCalculo() {
+        return contribuinte -> contribuinte.getTotalRendimentos().subtract(contribuinte.getContribuicaoPrevidenciaria());
     }
 
-    private static CalculadoraImposto calculoImpostoPorFaixa() {
+    private static CalculadoraImposto calculadoraImposto() {
         return new CalculadoraImpostoPorFaixa();
     }
 }

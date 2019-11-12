@@ -1,7 +1,7 @@
 package br.pucrs.politecnica._4636h.irpf;
 
-import br.pucrs.politecnica._4636h.irpf.application.CalculadoraIrpf;
-import br.pucrs.politecnica._4636h.irpf.application.CalculadoraIrpfFactory;
+import br.pucrs.politecnica._4636h.irpf.application.calculadora.CalculadoraIrpf;
+import br.pucrs.politecnica._4636h.irpf.application.calculadora.CalculadoraIrpfFactory;
 import br.pucrs.politecnica._4636h.irpf.model.TipoCalculo;
 import br.pucrs.politecnica._4636h.irpf.view.Menu;
 
