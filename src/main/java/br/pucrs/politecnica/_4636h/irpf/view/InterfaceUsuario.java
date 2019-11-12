@@ -22,7 +22,7 @@ public class InterfaceUsuario extends Application {
 
 	@Override
 	public void init() {
-		// código de inicialização
+		// cï¿½digo de inicializaï¿½ï¿½o
 		
 	}
 
@@ -54,11 +54,11 @@ public class InterfaceUsuario extends Application {
 		root.add(lbIdade, 0, 4);
 		tfIdade = new TextField();
 		root.add(tfIdade, 1, 4);
-		Label lbNumDependentes = new Label("Número de Dependentes:");
+		Label lbNumDependentes = new Label("NÃºmero de Dependentes:");
 		root.add(lbNumDependentes, 0, 5);
 		tfNumDependentes = new TextField();
 		root.add(tfNumDependentes, 1, 5);
-		Label lbContribuicaoPrev = new Label("Contribuição Previdenciária:");
+		Label lbContribuicaoPrev = new Label("ContribuiÃ§Ã£o PrevidenciÃ¡ria:");
 		root.add(lbContribuicaoPrev, 0, 6);
 		tfContribuicaoPrev = new TextField();
 		root.add(tfContribuicaoPrev, 1, 6);
