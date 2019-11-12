@@ -16,14 +16,20 @@ import javafx.stage.Stage;
 
 public class InterfaceUsuario extends Application {
 
+	private TextField tfContribuinte, tfCpf, tfIdade, tfNumDependentes, tfContribuicaoPrev, tfTotalRendimentos,
+			tfImpostoRenda;
+	private Stage primaryStage;
+
 	@Override
 	public void init() {
 		// código de inicialização
+		
 	}
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {		
-
+	public void start(Stage primaryStage) throws Exception {
+		
+		this.primaryStage = primaryStage;
 		GridPane root = new GridPane();
 		Scene scene = new Scene(root, 500, 400);
 		primaryStage.setTitle("IRPF");
@@ -38,41 +44,57 @@ public class InterfaceUsuario extends Application {
 		root.add(texto, 0, 0);
 		Label lbContribuinte = new Label("Contribuinte:");
 		root.add(lbContribuinte, 0, 2);
-		TextField tfContribuinte = new TextField();
+		tfContribuinte = new TextField();
 		root.add(tfContribuinte, 1, 2);
 		Label lbCpf = new Label("CPF:");
 		root.add(lbCpf, 0, 3);
-		TextField tfCpf = new TextField();
+		tfCpf = new TextField();
 		root.add(tfCpf, 1, 3);
 		Label lbIdade = new Label("Idade:");
 		root.add(lbIdade, 0, 4);
-		TextField tfIdade = new TextField();
+		tfIdade = new TextField();
 		root.add(tfIdade, 1, 4);
 		Label lbNumDependentes = new Label("Número de Dependentes:");
 		root.add(lbNumDependentes, 0, 5);
-		TextField tfNumDependentes = new TextField();
+		tfNumDependentes = new TextField();
 		root.add(tfNumDependentes, 1, 5);
 		Label lbContribuicaoPrev = new Label("Contribuição Previdenciária:");
 		root.add(lbContribuicaoPrev, 0, 6);
-		TextField tfContribuicaoPrev = new TextField();
+		tfContribuicaoPrev = new TextField();
 		root.add(tfContribuicaoPrev, 1, 6);
 		Label lbTotalRendimentos = new Label("Total de Rendimentos:");
 		root.add(lbTotalRendimentos, 0, 7);
-		TextField tfTotalRendimentos = new TextField();
+		tfTotalRendimentos = new TextField();
 		root.add(tfTotalRendimentos, 1, 7);
 		Label lbImpostoRenda = new Label("Imposto de Renda:");
 		root.add(lbImpostoRenda, 0, 8);
-		TextField tfImpostoRenda = new TextField();
+		tfImpostoRenda = new TextField();
 		root.add(tfImpostoRenda, 1, 8);
 
 		HBox hbBut = new HBox();
 		hbBut.setAlignment(Pos.BOTTOM_CENTER);
 		Button butCalcular = new Button("Calcular");
+		butCalcular.setOnAction(e -> trataCalcular());
 		Button butCancelar = new Button("Cancelar");
+		butCancelar.setOnAction(e -> trataCancelar());
 		hbBut.getChildren().add(butCalcular);
 		hbBut.getChildren().add(butCancelar);
 		root.add(hbBut, 1, 11);
 
+	}
+
+	private void trataCalcular() {
+		System.out.println("Contribuinte: " + tfContribuinte.getText() + "\nTotal Imposto de Renda: R$9999.99");
+	}
+
+	private void trataCancelar() {
+		tfContribuinte.clear();
+		tfCpf.clear();
+		tfIdade.clear();
+		tfNumDependentes.clear();
+		tfContribuicaoPrev.clear();
+		tfTotalRendimentos.clear();
+		tfImpostoRenda.clear();
 	}
 
 	public static void main(String[] args) {
