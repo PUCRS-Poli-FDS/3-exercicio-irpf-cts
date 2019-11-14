@@ -25,7 +25,7 @@ public class ContribuinteDaoJDBC implements ContribuinteDAO {
 			String insert = "INSERT INTO contribuintes " 
 					+ "(nome, cpf, idade, total_rendimentos, contribuicao_prev, num_dependentes) " 
 					+ "VALUES "
-					+ "(?, ?, ?, ?) ";
+					+ "(?, ?, ?, ?, ?, ?) ";
 
 			conn = DB.getConnection();
 			PreparedStatement st = conn.prepareStatement(insert);
@@ -88,14 +88,13 @@ public class ContribuinteDaoJDBC implements ContribuinteDAO {
 			st.setString(1, cpf);
 			rs = st.executeQuery();
 			if (rs.next()) {
-				Contribuinte contribuinte = new Contribuinte();
-				contribuinte.setNome(rs.getString("nome"));
-				contribuinte.setCpf(rs.getString("cpf"));
-				contribuinte.setIdade(rs.getInt("idade"));
-				contribuinte.setTotalRendimentos(Currency.valueOf(rs.getBigDecimal("total_rendimentos")));
-				contribuinte.setContribuicaoPrevidenciaria(Currency.valueOf(rs.getBigDecimal("contribuicao_prev")));
-				contribuinte.setNumDependentes(rs.getInt("num_dependentes"));
-				return contribuinte;
+				String nome = rs.getString("nome");
+				String cpf2 = rs.getString("cpf");
+				Integer idade = rs.getInt("idade");
+				Currency totalRendimentos = Currency.valueOf(rs.getBigDecimal("total_rendimentos"));
+				Currency contribuicao = Currency.valueOf(rs.getBigDecimal("contribuicao_prev"));
+				Integer numDependentes = rs.getInt("num_dependentes");
+				return new Contribuinte(nome, cpf2, idade, totalRendimentos, contribuicao, numDependentes);
 			}
 			return null;
 
@@ -114,14 +113,13 @@ public class ContribuinteDaoJDBC implements ContribuinteDAO {
 			rs = st.executeQuery();
 			List<Contribuinte> contribuintes = new ArrayList<>();
 			while (rs.next()) {
-				Contribuinte contribuinte = new Contribuinte();
-				contribuinte.setNome(rs.getString("nome"));
-				contribuinte.setCpf(rs.getString("cpf"));
-				contribuinte.setIdade(rs.getInt("idade"));
-				contribuinte.setTotalRendimentos(Currency.valueOf(rs.getBigDecimal("total_rendimentos")));
-				contribuinte.setContribuicaoPrevidenciaria(Currency.valueOf(rs.getBigDecimal("contribuicao_prev")));
-				contribuinte.setNumDependentes(rs.getInt("num_dependentes"));
-				contribuintes.add(contribuinte);
+				String nome = rs.getString("nome");
+				String cpf2 = rs.getString("cpf");
+				Integer idade = rs.getInt("idade");
+				Currency totalRendimentos = Currency.valueOf(rs.getBigDecimal("total_rendimentos"));
+				Currency contribuicao = Currency.valueOf(rs.getBigDecimal("contribuicao_prev"));
+				Integer numDependentes = rs.getInt("num_dependentes");
+				contribuintes.add(new Contribuinte(nome, cpf2, idade, totalRendimentos, contribuicao, numDependentes));
 			}
 			return contribuintes;
 
