@@ -21,6 +21,6 @@ public class CalculadoraDescontoCompleto implements CalculadoraDesconto {
     }
 
     private static boolean isIdoso(Contribuinte contribuinte) {
-        return contribuinte.getIdade() >= IDADE_IDOSO;
+        return contribuinte.getPessoa().getIdade() >= IDADE_IDOSO;
     }
 }
