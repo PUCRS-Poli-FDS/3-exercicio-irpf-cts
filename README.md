@@ -1,5 +1,9 @@
 # IRPF
 
+## Grupo
+
+Dante Pereira, Gustavo Farias, Paulo Mu
+
 ## Instruções - IntelliJ
 
 1. File -> New -> Project from existing sources
