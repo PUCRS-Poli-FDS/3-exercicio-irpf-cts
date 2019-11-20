@@ -1,16 +1,14 @@
 package br.pucrs.politecnica._4636h.irpf.view;
 
 import br.pucrs.politecnica._4636h.irpf.application.calculadora.CalculadoraIrpf;
-import br.pucrs.politecnica._4636h.irpf.application.calculadora.CalculadoraIrpfCompleto;
-import br.pucrs.politecnica._4636h.irpf.application.calculadora.CalculadoraIrpfSimplificado;
+import br.pucrs.politecnica._4636h.irpf.application.calculadora.CalculadoraIrpfFactory;
 import br.pucrs.politecnica._4636h.irpf.model.Contribuinte;
 import br.pucrs.politecnica._4636h.irpf.model.Currency;
 import br.pucrs.politecnica._4636h.irpf.model.PessoaFisica;
+import br.pucrs.politecnica._4636h.irpf.model.TipoCalculo;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
@@ -24,6 +22,7 @@ public class CalculadoraGridPane extends GridPane {
     private final PessoaFisica pessoa;
     private TextField tfContribuinte, tfCpf, tfIdade, tfNumDependentes, tfContribuicaoPrev, tfTotalRendimentos,
             tfImpostoRenda;
+    private TipoCalculo tipoCalculo = TipoCalculo.COMPLETO;
 
     public CalculadoraGridPane(Stage stage, PessoaFisica pessoa) {
         this.stage = stage;
@@ -90,32 +89,39 @@ public class CalculadoraGridPane extends GridPane {
         HBox hbBut = new HBox();
         hbBut.setAlignment(Pos.BOTTOM_CENTER);
 
-        Button butCalcularSimples = new Button("Calcular Simples");
-        butCalcularSimples.setOnAction(e -> trataCalcularSimples());
+        ToggleGroup tipoCalculoGroup = new ToggleGroup();
 
-        Button butCalcularCompleto = new Button ("Calcular Completo");
-        butCalcularCompleto.setOnAction(e -> trataCalcularCompleto());
+        RadioButton rbCompleto = new RadioButton("Cálculo Completo");
+        rbCompleto.setToggleGroup(tipoCalculoGroup);
+        rbCompleto.setSelected(true);
+        hbBut.getChildren().add(rbCompleto);
+
+        RadioButton rbSimplificado = new RadioButton("Simplificado");
+        rbSimplificado.setToggleGroup(tipoCalculoGroup);
+        hbBut.getChildren().add(rbSimplificado);
+
+        tipoCalculoGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue.equals(rbCompleto)) {
+                tipoCalculo = TipoCalculo.COMPLETO;
+            } else if(newValue.equals(rbSimplificado)) {
+                tipoCalculo = TipoCalculo.SIMPLIFICADO;
+            }
+        });
+
+        Button butCalcular = new Button("Calcular");
+        butCalcular.setOnAction(e -> trataCalcular());
 
         Button butCancelar = new Button("Cancelar");
         butCancelar.setOnAction(e -> trataCancelar());
 
-        hbBut.getChildren().add(butCalcularCompleto);
-        hbBut.getChildren().add(butCalcularSimples);
+        hbBut.getChildren().add(butCalcular);
         hbBut.getChildren().add(butCancelar);
         this.add(hbBut, 1, 11);
     }
 
-    private void trataCalcularCompleto() {
-        CalculadoraIrpf calculadora = new CalculadoraIrpfCompleto();
+    private void trataCalcular() {
+        CalculadoraIrpf calculadora = new CalculadoraIrpfFactory().getCalculadora(tipoCalculo);
         Currency imposto = calculadora.calcular(getContribuinte());
-
-        tfImpostoRenda.setText(imposto.getValue().toString());
-    }
-
-    private void trataCalcularSimples() {
-        CalculadoraIrpf calculadora = new CalculadoraIrpfSimplificado();
-        Currency imposto = calculadora.calcular(getContribuinte());
-
         tfImpostoRenda.setText(imposto.getValue().toString());
     }
 
