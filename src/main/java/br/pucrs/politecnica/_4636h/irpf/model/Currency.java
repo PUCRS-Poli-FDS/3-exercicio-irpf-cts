@@ -10,7 +10,7 @@ public class Currency {
 
     private final BigDecimal value;
 
-    private Currency(BigDecimal value) {
+    public Currency(BigDecimal value) {
         this.value = value;
     }
 

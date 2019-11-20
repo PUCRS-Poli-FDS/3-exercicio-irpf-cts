@@ -1,2 +1,5 @@
-workspace.xml
+.idea/
+.settings/
 target/
+.classpath
+.project

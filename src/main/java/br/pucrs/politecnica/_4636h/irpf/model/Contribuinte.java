@@ -2,68 +2,50 @@ package br.pucrs.politecnica._4636h.irpf.model;
 
 public class Contribuinte {
 
-    private final String nome;
-    private final String cpf;
-    private final Integer idade;
-    private final Currency totalRendimentos;
-    private final Currency contribuicaoPrevidenciaria;
-    private final Integer numDependentes;
+	private PessoaFisica pessoa;
+	private Currency totalRendimentos;
+	private Currency contribuicaoPrevidenciaria;
+	private Integer numDependentes;
 
-    public Contribuinte(String nome,
-                        String cpf,
-                        Integer idade,
-                        Currency totalRendimentos,
-                        Currency contribuicaoPrevidenciaria) {
-        this(nome, cpf, idade, totalRendimentos, contribuicaoPrevidenciaria, 0);
-    }
+	public Contribuinte(PessoaFisica pessoa,
+						Currency totalRendimentos,
+						Currency contribuicaoPrevidenciaria) {
+		this(pessoa, totalRendimentos, contribuicaoPrevidenciaria, 0);
+	}
 
-    public Contribuinte(String nome,
-                        String cpf,
-                        Integer idade,
-                        Currency totalRendimentos,
-                        Currency contribuicaoPrevidenciaria,
-                        Integer numDependentes) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.idade = idade;
-        this.totalRendimentos = totalRendimentos;
-        this.contribuicaoPrevidenciaria = contribuicaoPrevidenciaria;
-        this.numDependentes = numDependentes;
-    }
+	public Contribuinte(PessoaFisica pessoa,
+						Currency totalRendimentos,
+						Currency contribuicaoPrevidenciaria,
+						Integer numDependentes) {
+		this.pessoa = pessoa;
+		this.totalRendimentos = totalRendimentos;
+		this.contribuicaoPrevidenciaria = contribuicaoPrevidenciaria;
+		this.numDependentes = numDependentes;
+	}
 
-    public String getNome() {
-        return nome;
-    }
+	public PessoaFisica getPessoa() {
+		return pessoa;
+	}
 
-    public String getCpf() {
-        return cpf;
-    }
+	public Integer getNumDependentes() {
+		return numDependentes;
+	}
 
-    public Integer getIdade() {
-        return idade;
-    }
+	public Currency getTotalRendimentos() {
+		return totalRendimentos;
+	}
 
-    public Integer getNumDependentes() {
-        return numDependentes;
-    }
+	public Currency getContribuicaoPrevidenciaria() {
+		return contribuicaoPrevidenciaria;
+	}
 
-    public Currency getTotalRendimentos() {
-        return totalRendimentos;
-    }
-
-    public Currency getContribuicaoPrevidenciaria() {
-        return contribuicaoPrevidenciaria;
-    }
-
-    @Override
-    public String toString() {
-        return "Contribuinte{" +
-                "nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", idade=" + idade +
-                ", totalRendimentos=" + totalRendimentos +
-                ", contribuicaoPrevidenciaria=" + contribuicaoPrevidenciaria +
-                ", numDependentes=" + numDependentes +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "Contribuinte{" +
+				"pessoa=" + pessoa +
+				", totalRendimentos=" + totalRendimentos +
+				", contribuicaoPrevidenciaria=" + contribuicaoPrevidenciaria +
+				", numDependentes=" + numDependentes +
+				'}';
+	}
 }
