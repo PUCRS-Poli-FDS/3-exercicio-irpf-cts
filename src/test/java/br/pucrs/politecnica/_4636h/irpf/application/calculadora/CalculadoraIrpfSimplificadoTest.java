@@ -2,6 +2,7 @@ package br.pucrs.politecnica._4636h.irpf.application.calculadora;
 
 import br.pucrs.politecnica._4636h.irpf.model.Contribuinte;
 import br.pucrs.politecnica._4636h.irpf.model.Currency;
+import br.pucrs.politecnica._4636h.irpf.model.PessoaFisica;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -68,7 +69,11 @@ public class CalculadoraIrpfSimplificadoTest {
     }
 
     private Contribuinte qualquerContribuinte(Currency totalRendimentos, Currency contribuicao) {
-        return new Contribuinte("Maria Silva", "00011122233", 40, totalRendimentos, contribuicao);
+        return new Contribuinte(qualquerPessoaFisica(), totalRendimentos, contribuicao);
+    }
+
+    private PessoaFisica qualquerPessoaFisica() {
+        return new PessoaFisica("Maria Silva", "00011122233", 40);
     }
 
     private CalculadoraIrpf calculadora = new CalculadoraIrpfSimplificado();
