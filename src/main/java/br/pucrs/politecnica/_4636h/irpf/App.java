@@ -2,7 +2,6 @@ package br.pucrs.politecnica._4636h.irpf;
 
 import br.pucrs.politecnica._4636h.irpf.infrastructure.repository.JdbcPessoaFisicaRepository;
 import br.pucrs.politecnica._4636h.irpf.infrastructure.repository.PessoaFisicaRepository;
-import br.pucrs.politecnica._4636h.irpf.view.CalculadoraScene;
 import br.pucrs.politecnica._4636h.irpf.view.WelcomeScene;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -60,11 +59,9 @@ public class App extends Application {
             conn.prepareStatement(query).execute();
         } catch (SQLException ignore) {
         }
-
     }
 
     public static void main(String[] args) {
         launch(args);
     }
-
 }

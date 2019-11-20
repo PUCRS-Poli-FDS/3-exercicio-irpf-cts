@@ -18,7 +18,7 @@ public class CalculadoraDescontoCompletoIdoso implements CalculadoraDesconto {
         } else if (isContribuinteComTresACincoDependentes(contribuinte)){
             calculadoraDesconto = calculadoraDescontoComTresACincoDependentes();
         } else {
-            calculadoraDesconto = calculadoraDescontoComMaisDeCincoContribuintes();
+            calculadoraDesconto = calculadoraDescontoComMaisDeCincoDependentes();
         }
 
         return calculadoraDesconto;
@@ -34,7 +34,7 @@ public class CalculadoraDescontoCompletoIdoso implements CalculadoraDesconto {
         return (contribuinte, baseCalculo) -> baseCalculo.multiply(PERCENTUAL_DESCONTO);
     }
 
-    private CalculadoraDesconto calculadoraDescontoComMaisDeCincoContribuintes() {
+    private CalculadoraDesconto calculadoraDescontoComMaisDeCincoDependentes() {
         final double PERCENTUAL_DESCONTO = 0.06;
         return (contribuinte, baseCalculo) -> baseCalculo.multiply(PERCENTUAL_DESCONTO);
     }

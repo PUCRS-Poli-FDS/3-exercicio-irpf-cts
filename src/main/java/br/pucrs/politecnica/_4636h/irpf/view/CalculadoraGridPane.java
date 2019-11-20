@@ -106,7 +106,6 @@ public class CalculadoraGridPane extends GridPane {
     }
 
     private void trataCalcularCompleto() {
-        System.out.println("called");
         CalculadoraIrpf calculadora = new CalculadoraIrpfCompleto();
         Currency imposto = calculadora.calcular(getContribuinte());
 
