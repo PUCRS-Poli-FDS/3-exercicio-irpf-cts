@@ -53,7 +53,7 @@ public class WelcomeGridPane extends GridPane {
             alert.setContentText("CPF não cadastrado. Efetue o cadastro na tela à seguir.");
 
             if (alert.showAndWait().isPresent()) {
-                stage.setScene(new CadastroScene(stage, repository));
+                stage.setScene(new CadastroScene(stage, cpf.getText(), repository));
             }
         }
     }

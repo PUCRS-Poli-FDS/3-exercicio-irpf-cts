@@ -15,13 +15,15 @@ import javafx.stage.Stage;
 public class CadastroGridPane extends GridPane {
 
     private final Stage stage;
+    private final String cpf;
     private final PessoaFisicaRepository repository;
     private TextField tfNome;
     private TextField tfCpf;
     private TextField tfIdade;
 
-    public CadastroGridPane(Stage stage, PessoaFisicaRepository repository) {
+    public CadastroGridPane(Stage stage, String cpf, PessoaFisicaRepository repository) {
         this.stage = stage;
+        this.cpf = cpf;
         this.repository = repository;
 
         this.setAlignment(Pos.TOP_CENTER);
@@ -39,6 +41,8 @@ public class CadastroGridPane extends GridPane {
         this.add(lbCPF, 0, 1);
 
         tfCpf = new TextField();
+        tfCpf.setDisable(true);
+        tfCpf.setText(cpf);
         this.add(tfCpf, 1, 1);
 
         Label lbIdade = new Label("Idade:");

@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 public class CadastroScene extends Scene {
 
-    public CadastroScene(Stage stage, PessoaFisicaRepository repository) {
-        super(new CadastroGridPane(stage, repository));
+    public CadastroScene(Stage stage, String cpf, PessoaFisicaRepository repository) {
+        super(new CadastroGridPane(stage, cpf, repository));
     }
 }
