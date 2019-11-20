@@ -1,7 +1,5 @@
 package br.pucrs.politecnica._4636h.irpf.model;
 
-import com.sun.istack.internal.Nullable;
-
 public enum FaixaImposto {
     FAIXA_1(null, Currency.valueOf(12000.00)),
     FAIXA_2(Currency.valueOf(12000.01), Currency.valueOf(23999.99)),
@@ -10,7 +8,7 @@ public enum FaixaImposto {
     private final Currency min;
     private final Currency max;
 
-    FaixaImposto(@Nullable Currency min, @Nullable Currency max) {
+    FaixaImposto(Currency min, Currency max) {
         this.min = min;
         this.max = max;
     }

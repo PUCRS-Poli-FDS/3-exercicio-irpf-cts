@@ -1,11 +1,12 @@
 package br.pucrs.politecnica._4636h.irpf.view;
 
-import javafx.scene.Parent;
+import br.pucrs.politecnica._4636h.irpf.infrastructure.repository.PessoaFisicaRepository;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class CadastroScene extends Scene {
 
-    public CadastroScene() {
-        super(new CadastroGridPane());
+    public CadastroScene(Stage stage, PessoaFisicaRepository repository) {
+        super(new CadastroGridPane(stage, repository));
     }
 }

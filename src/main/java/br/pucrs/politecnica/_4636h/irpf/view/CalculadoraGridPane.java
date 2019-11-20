@@ -16,13 +16,19 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class CalculadoraGridPane extends GridPane {
 
+    private final Stage stage;
+    private final PessoaFisica pessoa;
     private TextField tfContribuinte, tfCpf, tfIdade, tfNumDependentes, tfContribuicaoPrev, tfTotalRendimentos,
             tfImpostoRenda;
 
-    public CalculadoraGridPane() {
+    public CalculadoraGridPane(Stage stage, PessoaFisica pessoa) {
+        this.stage = stage;
+        this.pessoa = pessoa;
+
         this.setAlignment(Pos.TOP_CENTER);
         this.setHgap(10);
         this.setVgap(10);
@@ -36,18 +42,24 @@ public class CalculadoraGridPane extends GridPane {
         this.add(lbContribuinte, 0, 2);
 
         tfContribuinte = new TextField();
+        tfContribuinte.setText(pessoa.getNome());
+        tfContribuinte.setDisable(true);
         this.add(tfContribuinte, 1, 2);
 
         Label lbCpf = new Label("CPF:");
         this.add(lbCpf, 0, 3);
 
         tfCpf = new TextField();
+        tfCpf.setText(pessoa.getCpf());
+        tfCpf.setDisable(true);
         this.add(tfCpf, 1, 3);
 
         Label lbIdade = new Label("Idade:");
         this.add(lbIdade, 0, 4);
 
         tfIdade = new TextField();
+        tfIdade.setText(pessoa.getIdade().toString());
+        tfIdade.setDisable(true);
         this.add(tfIdade, 1, 4);
 
         Label lbNumDependentes = new Label("Número de Dependentes:");
